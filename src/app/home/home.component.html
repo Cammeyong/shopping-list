@@ -1,0 +1,30 @@
+
+<div class="con">
+
+  <div class="formCon">
+    <h1>My Shopping List</h1>
+
+    <form [formGroup]="shoppingList" action="">
+
+      <div class="addItem">
+        <input type="text" formControlName="item" class="form-control" placeholder="Add Shopping Item Here " autofocus>
+
+        <div class="btn">
+          <button type="submit" (click)="addItem()">Add Item</button>
+        </div>
+
+
+      </div>
+
+
+    </form>
+
+  </div>
+
+
+
+
+
+  <app-shopping-list-view></app-shopping-list-view>
+
+</div>

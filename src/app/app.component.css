@@ -1,0 +1,17 @@
+nav{
+  width: 30%;
+  background-color: blueviolet;
+  margin-left: 35%;
+  padding: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+nav > a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 0 1% 0 1%;
+}nav > a:hover {
+  border-bottom: 2px solid white;
+}
+

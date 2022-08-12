@@ -1,0 +1,44 @@
+h1 {
+  margin: 0% 0 5% 25%;
+  text-align: center;
+  border-bottom: 2px solid blueviolet;
+  box-shadow: 0px 2px 3px 3px blueviolet;
+  width: 50%;
+}
+.con{
+  width: 500px;
+  height: 300px;
+  border: 1px solid blueviolet;
+  margin: 5% 0 0 33%;
+  border-top: none;
+  box-shadow: 0px 1px 2px 1px blueviolet;
+  padding-top: 2%;
+}
+.formCon > form > .addItem {
+  margin: 5% 0;
+  display: flex;
+  width: 100%;
+  position: relative;
+  padding: 5px;
+  justify-content: center;
+  align-content: center;
+
+}
+.formCon > form > .addItem > input {
+  border: none;
+  outline: none;
+  margin-right: 5%;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid blueviolet;
+
+}
+.formCon > form > .addItem> .btn > button {
+  padding: 5px 8px;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 1px 5px 1px blueviolet;
+}
