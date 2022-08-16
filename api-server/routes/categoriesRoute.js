@@ -14,7 +14,7 @@ let categoriesRoute = express.Router();
 
 
 // Get All items
-categoriesRoute.route('/').get((req, res, next) => {
+categoriesRoute.route('/getCategory').get((req, res, next) => {
   categories.find((error, data) => {
     if (error) {
       return next(error)
@@ -25,8 +25,8 @@ categoriesRoute.route('/').get((req, res, next) => {
 })
 
 
-//create shopping_Items
-categoriesRoute.route('/add').post((req, res, next) => {
+//create categories
+categoriesRoute.route('/addCategory').post((req, res,) => {
   categories.create(req.body, (error, data) => {
 
     if (error) {
@@ -39,7 +39,7 @@ categoriesRoute.route('/add').post((req, res, next) => {
 
 
 //find by Id
-categoriesRoute.route('/findSelectedItem/:id').get((req, res, next) => {
+categoriesRoute.route('/findSelectedCategory/:id').get((req, res, next) => {
   categories.findById(req.params.id, (error, data) => {
 
     if (error) {
@@ -52,7 +52,7 @@ categoriesRoute.route('/findSelectedItem/:id').get((req, res, next) => {
 
 // //update by id
 
-categoriesRoute.route('/updateById/:id').put((req, res, next) => {
+categoriesRoute.route('/updateCategoryById/:id').put((req, res, next) => {
   categories.findByIdAndUpdate(req.params.id, req.body, (error, data) => {
 
     if (error) {
@@ -75,4 +75,4 @@ categoriesRoute.route('/remove/:id').delete((req, res, next) => {
     }
   })
 })
-module.exports = shopping_listRoute;
+module.exports = categoriesRoute;

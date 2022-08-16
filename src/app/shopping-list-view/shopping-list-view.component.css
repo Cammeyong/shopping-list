@@ -1,3 +1,7 @@
+*{
+  background-color: white;
+}
+
 h2{
   font-size: 1.3rem;
   margin-left: 2%;
@@ -13,6 +17,7 @@ ul > li > a {
   color: blueviolet;
   font-weight: 700;
   margin-right: 5%;
+  
 }
 
 ul >li > button {

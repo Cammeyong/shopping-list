@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-let shopping_list = new Schema ({
-  type: {
+let category = new Schema ({
+  category: {
     type: String
   }
 
 }, {
   collection: 'categories'
 })
-module.exports = mongoose.model('list', shopping_list)
+module.exports = mongoose.model('category', category)

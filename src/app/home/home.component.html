@@ -1,8 +1,10 @@
-
+<!-- <img src="https://foodrunner.ca/assets/admin/base/images/blog_detail/Foodrunner_No-long-lines-of-checkouts.jpg"> -->
 <div class="con">
 
   <div class="formCon">
     <h1>My Shopping List</h1>
+
+    <img src="https://c.tenor.com/XW-LgnkZQ28AAAAM/shopping-online.gif" alt="">
 
     <form [formGroup]="shoppingList" action="">
 
@@ -21,10 +23,16 @@
 
   </div>
 
+  <h2>My Items:</h2>
 
+  <div *ngIf="itemsList.length" class="itemsList">
+    <ul *ngFor = "let item of itemsList">
+      <li><a routerLink="/update/{{item._id}}">{{item.item}} </a>
 
+        <button routerLink="/shopping-list-update/{{item._id}}">Edit</button>
+        <button (click)="remove(item)">Remove</button></li>
 
-
-  <app-shopping-list-view></app-shopping-list-view>
+    </ul>
+  </div>
 
 </div>

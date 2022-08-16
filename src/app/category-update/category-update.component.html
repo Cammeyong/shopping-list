@@ -1,0 +1,8 @@
+<div *ngIf="selectedItem" class="selectedItem">
+
+  <h3>Edit Category</h3>
+
+  <input place [(ngModel)] = "selectedItem.categories" style="font-style : italic">
+  <button (click)="updateItem()">Update</button>
+</div>
+

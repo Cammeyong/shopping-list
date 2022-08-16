@@ -16,25 +16,25 @@ export class ShoppingListViewComponent implements OnInit {
   constructor(private service: ShoppingListService, private location: Location) { }
 
   ngOnInit(): void {
-    this.getItems();
+    // this.getItems();
   }
 
-  getItems():void {
-    this.service.getShoppingList().subscribe(
-      (res) => {
-        this.itemsList = res;
-        console.log(`this.itemsList is ${JSON.stringify(this.itemsList)}`)
-      })
-  }
+  // getItems():void {
+  //   this.service.getShoppingList().subscribe(
+  //     (res) => {
+  //       this.itemsList = res;
+  //       console.log(`this.itemsList is ${JSON.stringify(this.itemsList)}`)
+  //     })
+  // }
 
 
-  goBack():void {
-    this.location.back();
-  }
+  // goBack():void {
+  //   this.location.back();
+  // }
 
-  remove(item: any) {
-    this.service.deleteItem(item._id).subscribe ( () => this.goBack())
-  }
+  // remove(item: any) {
+  //   this.service.deleteItem(item._id).subscribe ( () => this.goBack())
+  // }
 
 
 }

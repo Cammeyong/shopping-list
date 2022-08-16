@@ -1,9 +1,8 @@
 
-<div *ngIf="selectedItem">
+<div *ngIf="selectedItem" class="selectedItem">
 
   <h3>Edit Item</h3>
 
-  <input [(ngModel)] = "selectedItem.item">
-
+  <input [(ngModel)] = "selectedItem.item" style="font-style : italic">
   <button (click)="updateItem()">Update</button>
 </div>

@@ -1,0 +1,42 @@
+<div class="form">
+  <h1>Categories List</h1>
+
+  <form [formGroup]="categoryList" action="">
+
+    <div class="catItem">
+
+      <input type="text" formControlName="category" class="form-control" placeholder="Add Shopping List category Here">
+
+      <div class="btn">
+        <button type="submit" (click)="add()">Add category</button>
+      </div>
+      <br>
+
+    </div>
+
+    <!-- <div class="categories">
+      <a routerLink="/home">Back</a>
+    </div> -->
+  </form>
+</div>
+
+
+<div class="view">
+<div class="container2">
+  <div class="title">
+    <h2>View Categories List</h2>
+  </div>
+  <div *ngIf="categoriesItemList.length" class="items">
+  <ul *ngFor = "let category of categoriesItemList">
+    <li>
+      <a routerLink="/category_update/{{category._id}}">{{category.category}} </a>
+     <button routerLink="/category_update/{{category._id}}">Edit</button>
+     <button (click)="remove(category)">Remove</button>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+
+
+

@@ -46,7 +46,6 @@ export class ShoppingListService {
     )
   }
   deleteItem(id: any): Observable<shoppingItemModel> {
-    // alert("The Movie " + this.deleteMovie.name + " has been removed");
     return this.http.delete<shoppingItemModel>(`${this.rest_api}/remove/${id}`, this.httpHeader).pipe(
       tap( deletedItem => {
         alert(deletedItem.item + " has been removed from shopping List")
